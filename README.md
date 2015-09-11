@@ -58,4 +58,4 @@ m.group(1).get
 
 ## License
 
-`scala-sugar` is Copyright &copy; 2015 [Simeon Simeonov](https://about.me/simeonov) and [Swoop, Inc.](http://swoop.com). It is free software, and may be redistributed under the terms of the LICENSE.
+`scala-sugar` is Copyright &copy; 2015 [Simeon Simeonov](https://about.me/simeonov) and [Swoop, Inc.](http://swoop.com) It is free software, and may be redistributed under the terms of the LICENSE.
