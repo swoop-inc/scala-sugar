@@ -1,6 +1,6 @@
 # Scala Sugar
 
-Compared to coding in Java, coding in Scala is pretty sweet. Compared to coding in highly expressive languages such as Python and Ruby, Scala holds its own most of the time but not always. This library is a collection of useful extensions to the core Scala libraries (implicit and otherwise) that make programming is Scala even sweeter.
+Compared to coding in Java, coding in Scala is pretty sweet. Compared to coding in highly expressive languages such as Python and Ruby, Scala holds its own most of the time but not always. This library is a collection of useful extensions to the core Scala libraries (implicit and otherwise) that make programming in Scala even sweeter.
 
 This project uses [semantic versioning](http://semver.org/).
 
