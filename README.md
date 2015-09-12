@@ -54,6 +54,7 @@ m.group(1).get
   case Some(m) => m.group(1)
   case None => "nope"
 }
+"a+(b+)".r.findFirstMatchIn("no match here").map(_.group(1)).getOrElse("nope")
 ```
 
 ## License
