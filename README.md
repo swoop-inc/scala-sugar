@@ -25,6 +25,25 @@ import com.swoop.scala.sugar.Implicits._
 // res1: Float = 5.0
 ```
 
+### Operators
+
+```scala
+import com.swoop.scala.sugar.Implicits._
+
+// The |> (pipe) operator is borrowed from F# (inspired by Unix pipes).
+// It allows function composition to become akin to method chaining.
+// x |> f |> g is equivalent to g(f(x))
+
+def f(x: Int) = x * 10
+def g(x: Int) = x + 10
+
+g(f(5))
+res0: Int = 60
+
+5 |> f |> g
+res1: Int = 60
+```
+
 ### Regular expressions
 
 ```scala

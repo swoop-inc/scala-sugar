@@ -10,6 +10,10 @@ package object Implicits {
     def ap[B](f: A => B): B = f(x)
   }
 
+  implicit class PipelineOperator[A](val value: A) extends AnyVal {
+    def |>[B] (f: A => B) = f(value)
+  }
+
   implicit class RegexOps(val re: Regex) extends AnyVal {
     def test(source: CharSequence) = {
       re.findFirstIn(source) match {

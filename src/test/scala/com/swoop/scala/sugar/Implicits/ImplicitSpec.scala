@@ -11,6 +11,11 @@ class ImplicitSpec extends WordSpec with Matchers {
         5.ap(x => x + x) should equal(10)
       }
     }
+    "expose the |> operator" which {
+      "allows the rhs function to the applied to the lhs expression" in {
+        (5 |> identity) should equal(5)
+      }
+    }
     "include regex extensions" which {
       "expose #test" which {
         "checks whether a regex partially matches a string" in {
