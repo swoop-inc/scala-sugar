@@ -11,7 +11,8 @@ package object Implicits {
    * This is similar to one use of Ruby's Object#try (the other being taken care of by Option).
    * It is also convenient for injecting logic into a method chain, similar to Ruby's Object#tap.
    *
-   * @example {{{ import com.swoop.scala.sugar.Implicits._
+   * @example {{{
+   * import com.swoop.scala.sugar.Implicits._
    * 5.ap(x => x + x) // res0: Int = 10
    * // res0: Int = 10
    *
@@ -39,7 +40,8 @@ package object Implicits {
    * It allows function composition to become akin to method chaining.
    * x |> f |> g is equivalent to g(f(x))
    *
-   * @example {{{ import com.swoop.scala.sugar.Implicits._
+   * @example {{{
+   * import com.swoop.scala.sugar.Implicits._
    * def f(x: Int) = x * 10
    * def g(x: Int) = x + 10
    *
@@ -78,18 +80,13 @@ package object Implicits {
    * @param re The regular expression to be pimped
    */
   implicit class RegexOps(val re: Regex) extends AnyVal {
-    /** 
+    /**
      * Perform a boolean test for a regular expression in a Character Sequence
      * 
      * @param source The CharSequence to match the regular expression in this instance's re against
      * @return True or False if the expression exists in the source
      */
-    def test(source: CharSequence) = {
-      re.findFirstIn(source) match {
-        case Some(_) => true
-        case _ => false
-      }
-    }
+    def test(source: CharSequence) = re.findFirstIn(source).isDefined
 
     /** 
      * regex.matchIn(str) returns the first match in an object that makes optional extraction easy.

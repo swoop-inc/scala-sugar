@@ -14,15 +14,9 @@ import scala.util.matching.Regex.Match
  * @param result an Option containing a Match
  */
 class MatchedInString(val result: Option[Match]) extends AnyVal {
-  def group(id: Int) = result match {
-    case Some(m) => Some(m.group(id))
-    case None => None
-  }
+  def group(id: Int) = result.map(_.group(id))
 
-  def group(id: String) = result match {
-    case Some(m) => Some(m.group(id))
-    case None => None
-  }
+  def group(id: String) = result.map(_.group(id))
 
   def groupCount = result match {
     case Some(m) => m.groupCount
@@ -34,10 +28,7 @@ class MatchedInString(val result: Option[Match]) extends AnyVal {
     case None => Seq[String]()
   }
 
-  def force = new MatchedInString(result match {
-    case Some(m) => Some(m.force)
-    case None => None
-  })
+  def force = new MatchedInString(result.map(_.force))
 
   def subgroups = result match {
     case Some(m) => m.subgroups
