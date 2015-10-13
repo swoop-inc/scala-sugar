@@ -15,12 +15,7 @@ package object Implicits {
   }
 
   implicit class RegexOps(val re: Regex) extends AnyVal {
-    def test(source: CharSequence) = {
-      re.findFirstIn(source) match {
-        case Some(_) => true
-        case _ => false
-      }
-    }
+    def test(source: CharSequence) = re.findFirstIn(source).isDefined 
 
     def matchIn(source: CharSequence) = {
       new MatchedInString(re.findFirstMatchIn(source))
