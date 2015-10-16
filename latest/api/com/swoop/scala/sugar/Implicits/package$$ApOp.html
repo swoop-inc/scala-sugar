@@ -1,0 +1,589 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>ApOp - com.swoop.scala.sugar.Implicits.ApOp</title>
+          <meta name="description" content="ApOp - com.swoop.scala.sugar.Implicits.ApOp" />
+          <meta name="keywords" content="ApOp com.swoop.scala.sugar.Implicits.ApOp" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'com.swoop.scala.sugar.Implicits.package$$ApOp';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../../../../../lib/class_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="com">com</a>.<a href="../../../package.html" class="extype" name="com.swoop">swoop</a>.<a href="../../package.html" class="extype" name="com.swoop.scala">scala</a>.<a href="../package.html" class="extype" name="com.swoop.scala.sugar">sugar</a>.<a href="package.html" class="extype" name="com.swoop.scala.sugar.Implicits">Implicits</a></p>
+        <h1>ApOp</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ApOp</span><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>ap() allows arbitrary function chaining. The name comes from ap(plying) a function.
+This is similar to one use of Ruby's Object#try (the other being taken care of by Option).
+It is also convenient for injecting logic into a method chain, similar to Ruby's Object#tap.
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>The Type of x</p></dd></dl><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">import</span> com.swoop.scala.sugar.Implicits._
+<span class="num">5.</span>ap(x <span class="kw">=&gt;</span> x + x) <span class="cmt">// res0: Int = 10</span>
+<span class="cmt">// res0: Int = 10</span>
+
+<span class="num">5.</span>ap{x <span class="kw">=&gt;</span> println(s<span class="lit">"I got ${x}"</span>); x}.toFloat
+ I got <span class="num">5</span>
+res1: <span class="std">Float</span> = <span class="num">5.0</span></pre></li></ol>
+            </div></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyVal">AnyVal</span>, <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.NotNull" class="extype" target="_top">NotNull</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.swoop.scala.sugar.Implicits.ApOp"><span>ApOp</span></li><li class="in" name="scala.AnyVal"><span>AnyVal</span></li><li class="in" name="scala.NotNull"><span>NotNull</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="com.swoop.scala.sugar.Implicits.PipelineOperator" data-hidden="false"><span>by PipelineOperator</span></li><li class="in" name="com.swoop.scala.sugar.Implicits.ApOp" data-hidden="false"><span>by ApOp</span></li><li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.any2stringfmt" data-hidden="true"><span>by any2stringfmt</span></li><li class="in" name="scala.Predef.any2ArrowAssoc" data-hidden="true"><span>by any2ArrowAssoc</span></li><li class="in" name="scala.Predef.any2Ensuring" data-hidden="true"><span>by any2Ensuring</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="com.swoop.scala.sugar.Implicits.ApOp#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(x:A):com.swoop.scala.sugar.Implicits.package.ApOp[A]"></a>
+      <a id="&lt;init&gt;:ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ApOp</span><span class="params">(<span name="x">x: <span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span></span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Any###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.runtime.StringAdd" class="extype" target="_top">StringAdd</a> performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(ApOp[A],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.swoop.scala.sugar.Implicits.ApOp#ap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ap[B](f:A=&gt;B):B"></a>
+      <a id="ap[B]((A)⇒B):B"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>) ⇒ <span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.ap.B">B</span></span>)</span><span class="result">: <span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.ap.B">B</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">ap(ply) a function to the class constructor's x value</p><div class="fullcomment"><div class="comment cmt"><p>ap(ply) a function to the class constructor's x value</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>Return type of the function being applied</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to be applied to x</p></dd><dt>returns</dt><dd class="cmt"><p>The result of type B from applying the function f to this instance's x
+</p></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((ApOp[A])⇒Boolean,⇒Any):ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]) ⇒ <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((ApOp[A])⇒Boolean):ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]) ⇒ <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>)</span><span class="result">: <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.runtime.StringFormat" class="extype" target="_top">StringFormat</a> performed by method any2stringfmt in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyVal#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_&lt;:AnyVal]"></a>
+      <a id="getClass():Class[_&lt;:AnyVal]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.Class">Class</span>[_ &lt;: <span class="extype" name="scala.AnyVal">AnyVal</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyVal → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.Any#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.swoop.scala.sugar.Implicits.PipelineOperator#value" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="value:A"></a>
+      <a id="value:ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">value</span><span class="result">: <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The value which will be passed to the piped function as an argument
+</p><div class="fullcomment"><div class="comment cmt"><p>The value which will be passed to the piped function as an argument
+</p></div><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <a href="package$$PipelineOperator.html" class="extype" name="com.swoop.scala.sugar.Implicits.PipelineOperator">PipelineOperator</a>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method PipelineOperator in <a href="package.html" class="extype" name="com.swoop.scala.sugar.Implicits">com.swoop.scala.sugar.Implicits</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="package$$PipelineOperator.html" class="extype" name="com.swoop.scala.sugar.Implicits.PipelineOperator">PipelineOperator</a></dd></dl></div>
+    </li><li name="com.swoop.scala.sugar.Implicits.ApOp#x" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:A"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">x</span><span class="result">: <span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.swoop.scala.sugar.Implicits.PipelineOperator#|&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="|&gt;[B](f:A=&gt;B):B"></a>
+      <a id="|&gt;[B]((ApOp[A])⇒B):B"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bar$greater" class="implicit">|&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]) ⇒ <span class="extype" name="com.swoop.scala.sugar.Implicits.PipelineOperator.|&gt;.B">B</span></span>)</span><span class="result">: <span class="extype" name="com.swoop.scala.sugar.Implicits.PipelineOperator.|&gt;.B">B</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">compose a function using method chaining</p><div class="fullcomment"><div class="comment cmt"><p>compose a function using method chaining</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>Return type of the function being chained</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to be chained and applied to this instance's value
+</p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <a href="package$$PipelineOperator.html" class="extype" name="com.swoop.scala.sugar.Implicits.PipelineOperator">PipelineOperator</a>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method PipelineOperator in <a href="package.html" class="extype" name="com.swoop.scala.sugar.Implicits">com.swoop.scala.sugar.Implicits</a>.
+            
+          </dd><dt>Definition Classes</dt><dd><a href="package$$PipelineOperator.html" class="extype" name="com.swoop.scala.sugar.Implicits.PipelineOperator">PipelineOperator</a></dd></dl></div>
+    </li><li name="scala.Predef.any2ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(ApOp[A],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Shadowed Implicit Value Members</h3>
+              <ol><li name="com.swoop.scala.sugar.Implicits.ApOp#ap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ap[B](f:A=&gt;B):B"></a>
+      <a id="ap[B]((ApOp[A])⇒B):B"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">ap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]) ⇒ <span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.ap.B">B</span></span>)</span><span class="result">: <span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.ap.B">B</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">ap(ply) a function to the class constructor's x value</p><div class="fullcomment"><div class="comment cmt"><p>ap(ply) a function to the class constructor's x value</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>Return type of the function being applied</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function to be applied to x</p></dd><dt>returns</dt><dd class="cmt"><p>The result of type B from applying the function f to this instance's x
+</p></dd></dl><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method ApOp in <a href="package.html" class="extype" name="com.swoop.scala.sugar.Implicits">com.swoop.scala.sugar.Implicits</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(apOp: ApOp[ApOp[A]]).ap(f)</pre></div></dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.runtime.StringAdd" class="extype" target="_top">StringAdd</a> performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(apOp: StringAdd).self</pre></div></dd><dt>Definition Classes</dt><dd>StringAdd</dd></dl></div>
+    </li><li name="scala.Predef.any2stringfmt#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:Any"></a>
+      <a id="self:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">self</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.runtime.StringFormat" class="extype" target="_top">StringFormat</a> performed by method any2stringfmt in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is ambiguous. One or more implicitly inherited members have similar signatures, so calling this member may produce an ambiguous implicit conversion compiler error.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(apOp: StringFormat).self</pre></div></dd><dt>Definition Classes</dt><dd>StringFormat</dd></dl></div>
+    </li><li name="com.swoop.scala.sugar.Implicits.ApOp#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed">x</span><span class="result">: <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method ApOp in <a href="package.html" class="extype" name="com.swoop.scala.sugar.Implicits">com.swoop.scala.sugar.Implicits</a>.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(apOp: ApOp[ApOp[A]]).x</pre></div></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.Predef.any2ArrowAssoc#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use leftOfArrow instead">x</span><span class="result">: <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method any2ArrowAssoc in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(apOp: ArrowAssoc[ApOp[A]]).x</pre></div></dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>leftOfArrow<code> instead</code></u></code></p></dd></dl></div>
+    </li><li name="scala.Predef.any2Ensuring#x" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="x:A"></a>
+      <a id="x:ApOp[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit shadowed deprecated" title="Deprecated: (Since version 2.10.0) Use resultOfEnsuring instead">x</span><span class="result">: <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]] performed by method any2Ensuring in scala.Predef.
+            
+          </dd><dt class="implicit">Shadowing</dt><dd>This implicitly inherited member is shadowed by one or more members in this class.<br />To access this member you can use a <a href="http://stackoverflow.com/questions/2087250/what-is-the-purpose-of-type-ascription-in-scala" target="_blank">type ascription</a>:<br /><div class="cmt"><pre>(apOp: Ensuring[ApOp[A]]).x</pre></div></dd><dt>Definition Classes</dt><dd>Ensuring</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.10.0)</i> Use <code><u>resultOfEnsuring<code> instead</code></u></code></p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyVal">
+              <h3>Inherited from <span class="extype" name="scala.AnyVal">AnyVal</span></h3>
+            </div><div class="parent" name="scala.NotNull">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.NotNull" class="extype" target="_top">NotNull</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="com.swoop.scala.sugar.Implicits.PipelineOperator">
+              <h3>Inherited by implicit conversion PipelineOperator from
+                <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to <a href="package$$PipelineOperator.html" class="extype" name="com.swoop.scala.sugar.Implicits.PipelineOperator">PipelineOperator</a>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]]
+              </h3>
+            </div><div class="conversion" name="com.swoop.scala.sugar.Implicits.ApOp">
+              <h3>Inherited by implicit conversion ApOp from
+                <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.runtime.StringAdd" class="extype" target="_top">StringAdd</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2stringfmt">
+              <h3>Inherited by implicit conversion any2stringfmt from
+                <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to <a href="http://www.scala-lang.org/api/2.10.4/index.html#scala.runtime.StringFormat" class="extype" target="_top">StringFormat</a>
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2ArrowAssoc">
+              <h3>Inherited by implicit conversion any2ArrowAssoc from
+                <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.any2Ensuring">
+              <h3>Inherited by implicit conversion any2Ensuring from
+                <a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="com.swoop.scala.sugar.Implicits.ApOp">ApOp</a>[<span class="extype" name="com.swoop.scala.sugar.Implicits.ApOp.A">A</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../../../lib/template.js"></script>
+    </body>
+      </html>
