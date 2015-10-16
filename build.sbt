@@ -23,3 +23,9 @@ javacOptions in(Compile, doc) ++= Seq("-notimestamp", "-linksource")
 autoAPIMappings := true
 
 testOptions in Test += Tests.Argument("-oS")
+
+// For ghpages-push-site
+site.settings
+ghpages.settings
+git.remoteRepo := "git@github.com:swoop-inc/scala-sugar.git"
+site.includeScaladoc()

@@ -76,6 +76,10 @@ m.group(1).get
 "a+(b+)".r.findFirstMatchIn("no match here").map(_.group(1)).getOrElse("nope")
 ```
 
+## Scaladoc
+
+The latest API Scaladoc is [here](http://swoop-inc.github.io/scala-sugar/latest/api).
+
 ## License
 
 `scala-sugar` is Copyright &copy; 2015 [Simeon Simeonov](https://about.me/simeonov) and [Swoop, Inc.](http://swoop.com) It is free software, and may be redistributed under the terms of the LICENSE.
