@@ -10,9 +10,9 @@ licenses +=("MIT", url("http://opensource.org/licenses/MIT"))
 
 javacOptions ++= Seq("-source", "1.7", "-target", "1.7")
 
-scalaVersion := "2.10.4"
+scalaVersion := "2.11.8"
 
-crossScalaVersions := Seq("2.10.4", "2.10.5", "2.11.4")
+crossScalaVersions := Seq("2.10.6", "2.11.8")
 
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "2.2.1" % "test"
